@@ -800,3 +800,42 @@ footer p{
   text-align: center;
 
 }
+```css id="9f7o2a"
+/* ======================================
+   ÁREA DO USUÁRIO
+====================================== */
+
+.area-usuario {
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.area-usuario a {
+
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background-color: #0d6efd;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: 0.3s;
+
+}
+
+.area-usuario a:hover {
+
+  background-color: #084298;
+  color: white;
+
+}
+
+.area-usuario span {
+
+  font-weight: bold;
+  color: #333;
+
+}
+```

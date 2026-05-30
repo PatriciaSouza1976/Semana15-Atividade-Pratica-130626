@@ -1,13 +1,14 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
 
   <!-- Leaflet -->
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet/dist/leaflet.css"
-/>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  >
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,13 +21,12 @@
     rel="stylesheet"
   >
 
-  <!-- FullCalendar CORRETO -->
+  <!-- FullCalendar -->
   <link
     href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.css"
     rel="stylesheet"
   >
 
- 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -60,6 +60,8 @@
 
     <nav class="menu-topo">
 
+      <a href="#" id="linkLogin">Entrar</a>
+
       <a href="#categorias">
         Categorias
       </a>
@@ -80,7 +82,24 @@
         Mapa
       </a>
 
+      <!-- NOVO -->
+      <a href="favoritos.html">
+        Favoritos
+      </a>
+
     </nav>
+
+    <!-- =====================================
+         LOGIN USUÁRIO
+    ====================================== -->
+
+    <div id="areaUsuario" class="area-usuario">
+
+      <a href="#" id="linkLogin">
+        Entrar
+      </a>
+
+    </div>
 
   </header>
 
@@ -203,9 +222,7 @@
     <h2>Descubra Belo Horizonte</h2>
 
     <p>
-      <p>
-  Descubra cultura, gastronomia e turismo em Belo Horizonte.
-</p>
+      Descubra cultura, gastronomia e turismo em Belo Horizonte.
     </p>
 
     <!-- BUSCA -->
@@ -342,132 +359,133 @@
 
   <!-- =====================================
        DESTINOS
-===================================== -->
+  ====================================== -->
 
-<section id="destinos" class="container mt-5">
+  <section id="destinos" class="container mt-5">
 
-  <h2 class="text-center">
-    Destaques de Belo Horizonte
-  </h2>
-
-  <p class="text-center">
-    Confira alguns dos locais turísticos mais visitados.
-  </p>
-
-  <div
-    id="destinosContainer"
-    class="row mt-4"
-  ></div>
-
-</section>
-
-<!-- =====================================
-     FORMULÁRIO CRUD
-===================================== -->
-
-<section class="container mt-5">
-
-  <div class="crud-area p-4 shadow-sm rounded bg-light">
-
-    <h2 class="titulo-cadastro mb-4">
-
-      ➕ Cadastro de Destinos
-
-      <span class="subtitulo-cadastro">
-        - Adicione novos locais turísticos dinamicamente.
-      </span>
-
+    <h2 class="text-center">
+      Destaques de Belo Horizonte
     </h2>
 
-    <div class="row g-3 align-items-end justify-content-center">
+    <p class="text-center">
+      Confira alguns dos locais turísticos mais visitados.
+    </p>
 
-      <!-- NOME -->
+    <div
+      id="destinosContainer"
+      class="row mt-4"
+    ></div>
 
-      <div class="col-md-4">
+  </section>
 
-        <label class="form-label fw-semibold">
-          Nome do local
-        </label>
+  <!-- =====================================
+       FORMULÁRIO CRUD
+  ====================================== -->
 
-        <input
-          type="text"
-          id="novoNome"
-          class="form-control"
-          placeholder="Ex: Mercado Central"
-        >
+  <section class="container mt-5">
 
-      </div>
+    <div class="crud-area p-4 shadow-sm rounded bg-light">
 
-      <!-- CATEGORIA -->
+      <h2 class="titulo-cadastro mb-4">
 
-      <div class="col-md-3">
+        ➕ Cadastro de Destinos
 
-        <label class="form-label fw-semibold">
-          Categoria
-        </label>
+        <span class="subtitulo-cadastro">
+          - Adicione novos locais turísticos dinamicamente.
+        </span>
 
-        <select
-          id="novaCategoria"
-          class="form-select"
-        >
+      </h2>
 
-          <option value="">
-            Escolha
-          </option>
+      <div class="row g-3 align-items-end justify-content-center">
 
-          <option value="museu">
-            Museu
-          </option>
+        <!-- NOME -->
 
-          <option value="parque">
-            Parque
-          </option>
+        <div class="col-md-4">
 
-          <option value="bar">
-            Bar
-          </option>
+          <label class="form-label fw-semibold">
+            Nome do local
+          </label>
 
-        </select>
+          <input
+            type="text"
+            id="novoNome"
+            class="form-control"
+            placeholder="Ex: Mercado Central"
+          >
 
-      </div>
+        </div>
 
-      <!-- BAIRRO -->
+        <!-- CATEGORIA -->
 
-      <div class="col-md-3">
+        <div class="col-md-3">
 
-        <label class="form-label fw-semibold">
-          Bairro
-        </label>
+          <label class="form-label fw-semibold">
+            Categoria
+          </label>
 
-        <input
-          type="text"
-          id="novoBairro"
-          class="form-control"
-          placeholder="Ex: Savassi"
-        >
+          <select
+            id="novaCategoria"
+            class="form-select"
+          >
 
-      </div>
+            <option value="">
+              Escolha
+            </option>
 
-      <!-- BOTÃO -->
+            <option value="museu">
+              Museu
+            </option>
 
-      <div class="col-md-2 d-grid">
+            <option value="parque">
+              Parque
+            </option>
 
-        <button
-          id="btnAdicionar"
-          class="btn btn-primary"
-        >
+            <option value="bar">
+              Bar
+            </option>
 
-          Adicionar
+          </select>
 
-        </button>
+        </div>
+
+        <!-- BAIRRO -->
+
+        <div class="col-md-3">
+
+          <label class="form-label fw-semibold">
+            Bairro
+          </label>
+
+          <input
+            type="text"
+            id="novoBairro"
+            class="form-control"
+            placeholder="Ex: Savassi"
+          >
+
+        </div>
+
+        <!-- BOTÃO -->
+
+        <div class="col-md-2 d-grid">
+
+          <button
+            id="btnAdicionar"
+            class="btn btn-primary"
+          >
+
+            Adicionar
+
+          </button>
+
+        </div>
 
       </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
   <!-- =====================================
        PAINEL
   ====================================== -->
@@ -555,17 +573,16 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <!-- FullCalendar CORRETO -->
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+<!-- FullCalendar -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales-all.global.min.js"></script>
 
-  <!-- Locale PT-BR -->
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales-all.global.min.js"></script>
+<!-- LOGIN -->
 
-  
+
 <!-- Scripts principais -->
-<script src="js/script.js"></script>
 <script src="js/graficos.js"></script>
 <script src="js/calendario.js"></script>
 
@@ -576,5 +593,127 @@
 <script src="js/mapa.js"></script>
 
 </body>
+// ======================================
+// LOGIN
+// ======================================
 
+const usuarios = [
+  { id: 1, nome: "Administrador", login: "admin", senha: "123" },
+  { id: 2, nome: "Usuário", login: "user", senha: "123" }
+];
+
+function fazerLogin() {
+
+  const login = prompt("Digite o login:");
+  const senha = prompt("Digite a senha:");
+
+  const usuario = usuarios.find(u =>
+    u.login === login && u.senha === senha
+  );
+
+  if (usuario) {
+
+    sessionStorage.setItem(
+      "usuarioCorrente",
+      JSON.stringify(usuario)
+    );
+
+    alert("Login realizado com sucesso!");
+
+    window.location.href = "index.html";
+
+  } else {
+    alert("Login ou senha inválidos");
+  }
+}
+
+
+
+</html>
+```
+ <!-- LOGIN -->
+<script src="assets/js/login.js"></script>
+
+<!-- Scripts principais -->
+<script src="js/graficos.js"></script>
+<script src="js/calendario.js"></script>
+
+<!-- Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- MAPA -->
+<script src="js/mapa.js"></script>
+
+</body>
+// ======================================
+// LOGIN
+// ======================================
+
+const usuarios = [
+  { id: 1, nome: "Administrador", login: "admin", senha: "123" },
+  { id: 2, nome: "Usuário", login: "user", senha: "123" }
+];
+
+function fazerLogin() {
+
+  const login = prompt("Digite o login:");
+  const senha = prompt("Digite a senha:");
+
+  const usuario = usuarios.find(u =>
+    u.login === login && u.senha === senha
+  );
+
+  if (usuario) {
+
+    sessionStorage.setItem(
+      "usuarioCorrente",
+      JSON.stringify(usuario)
+    );
+
+    alert("Login realizado com sucesso!");
+
+    window.location.href = "index.html";
+
+  } else {
+    alert("Login ou senha inválidos");
+  }
+}
+
+
+
+</html>
+```
+    <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales-all.global.min.js"></script>
+
+  <!-- LOGIN JS (ÚNICO E CORRETO) -->
+  <script src="modulos/login/login.js"></script>
+
+  <!-- SCRIPTS PRINCIPAIS -->
+  <script src="js/graficos.js"></script>
+  <script src="js/calendario.js"></script>
+  <script src="js/mapa.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- LOGIN CLICK (SÓ UMA VEZ) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const linkLogin = document.getElementById("linkLogin");
+
+      if (!linkLogin) return;
+
+      linkLogin.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.href = "modulos/login/index.html";
+      });
+
+    });
+  </script>
+
+</body>
 </html>
