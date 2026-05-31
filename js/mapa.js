@@ -8,12 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!mapaContainer) return;
 
-  // evita erro de duplicação
+  // ==============================
+  // EVITA DUPLICAÇÃO DO LEAFLET
+  // ==============================
   if (mapaContainer._leaflet_id) {
     mapaContainer._leaflet_id = null;
+    mapaContainer.innerHTML = "";
   }
 
-  const mapa = L.map("mapaBH").setView(
+  // ==============================
+  // CRIA MAPA
+  // ==============================
+  const mapa = L.map(mapaContainer).setView(
     [-19.9208, -43.9386],
     12
   );
@@ -25,6 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   ).addTo(mapa);
 
+  // ==============================
+  // PONTOS TURÍSTICOS
+  // ==============================
   const pontosTuristicos = [
     {
       nome: "Praça da Liberdade",
@@ -91,17 +100,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   ];
 
+  // ==============================
+  // MARCADORES
+  // ==============================
   pontosTuristicos.forEach(local => {
+
     L.marker(local.coordenadas)
       .addTo(mapa)
       .bindPopup(`
         <div style="width:220px;">
-          <h5 style="color:#0d6efd;">${local.nome}</h5>
-          <p>${local.descricao}</p>
-          <p><strong>📍</strong> ${local.endereco}</p>
-          <p>⭐ ${local.avaliacao}</p>
+          <h5 style="color:#0d6efd; margin-bottom:6px;">
+            ${local.nome}
+          </h5>
+          <p style="margin:0 0 6px 0;">
+            ${local.descricao}
+          </p>
+          <p style="margin:0;">
+            <strong>📍</strong> ${local.endereco}
+          </p>
+          <p style="margin:0;">
+            ⭐ ${local.avaliacao}
+          </p>
         </div>
       `);
+
   });
 
 });

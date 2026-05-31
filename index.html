@@ -1,19 +1,18 @@
-```html
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Conheça BH - Turismo em Belo Horizonte</title>
 
   <!-- Leaflet -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet/dist/leaflet.css"
   >
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Conheça BH - Turismo em Belo Horizonte</title>
 
   <!-- Bootstrap -->
   <link
@@ -58,9 +57,9 @@
 
     </div>
 
-    <nav class="menu-topo">
+    <!-- MENU -->
 
-      <a href="#" id="linkLogin">Entrar</a>
+    <nav class="menu-topo">
 
       <a href="#categorias">
         Categorias
@@ -82,22 +81,16 @@
         Mapa
       </a>
 
-      <!-- NOVO -->
       <a href="favoritos.html">
         Favoritos
       </a>
 
     </nav>
 
-    <!-- =====================================
-         LOGIN USUÁRIO
-    ====================================== -->
+  <!-- ÁREA DO USUÁRIO -->
 
-    <div id="areaUsuario" class="area-usuario">
+<div id="areaUsuario" class="area-usuario">
 
-      <a href="#" id="linkLogin">
-        Entrar
-      </a>
 
     </div>
 
@@ -185,8 +178,6 @@
 
       </div>
 
-      <!-- BOTÕES -->
-
       <button
         class="carousel-control-prev"
         type="button"
@@ -225,8 +216,6 @@
       Descubra cultura, gastronomia e turismo em Belo Horizonte.
     </p>
 
-    <!-- BUSCA -->
-
     <div class="busca">
 
       <input
@@ -242,112 +231,50 @@
     </div>
 
   </section>
+```
 
-  <!-- =====================================
-       CATEGORIAS
-  ====================================== -->
 
-  <section id="categorias" class="container mt-5">
+<!-- =====================================
+     CATEGORIAS
+====================================== -->
 
-    <h2>Categorias Turísticas</h2>
+<section id="categorias" class="container mt-5">
 
-    <p>
-      Escolha uma categoria para explorar.
-    </p>
+  <h2 class="text-center">
+    Categorias Turísticas
+  </h2>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+  <p class="text-center">
+    Escolha uma categoria para explorar.
+  </p>
 
-      <!-- MUSEUS -->
+  <div class="row row-cols-1 row-cols-md-3 g-4">
 
-      <div class="col">
+    <!-- MUSEUS -->
 
-        <div
-          class="card h-100 categoria-card"
-          onclick="filtrarCategoria('museu')"
-          style="cursor:pointer;"
+    <div class="col">
+
+      <div
+        class="card h-100 categoria-card"
+        onclick="filtrarCategoria('museu')"
+        style="cursor:pointer;"
+      >
+
+        <img
+          src="assets/imagem/museus.png"
+          class="card-img-top"
+          alt="Museus"
         >
 
-          <img
-            src="assets/imagem/museus.png"
-            class="card-img-top"
-            alt="Museus"
-          >
+        <div class="card-body">
 
-          <div class="card-body">
+          <h5 class="card-title">
+            Museus
+          </h5>
 
-            <h5 class="card-title">
-              Museus
-            </h5>
-
-            <p class="card-text">
-              Explore os melhores museus de Belo Horizonte.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- PARQUES -->
-
-      <div class="col">
-
-        <div
-          class="card h-100 categoria-card"
-          onclick="filtrarCategoria('parque')"
-          style="cursor:pointer;"
-        >
-
-          <img
-            src="assets/imagem/parques.png"
-            class="card-img-top"
-            alt="Parques"
-          >
-
-          <div class="card-body">
-
-            <h5 class="card-title">
-              Parques
-            </h5>
-
-            <p class="card-text">
-              Conheça parques e áreas verdes da cidade.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <!-- BARES -->
-
-      <div class="col">
-
-        <div
-          class="card h-100 categoria-card"
-          onclick="filtrarCategoria('bar')"
-          style="cursor:pointer;"
-        >
-
-          <img
-            src="assets/imagem/bares.png"
-            class="card-img-top"
-            alt="Bares"
-          >
-
-          <div class="card-body">
-
-            <h5 class="card-title">
-              Bares
-            </h5>
-
-            <p class="card-text">
-              Descubra bares tradicionais e gastronômicos.
-            </p>
-
-          </div>
+          <p class="card-text">
+            Explore os melhores museus de Belo Horizonte.
+          </p>
 
         </div>
 
@@ -355,365 +282,321 @@
 
     </div>
 
-  </section>
+    <!-- PARQUES -->
 
-  <!-- =====================================
-       DESTINOS
-  ====================================== -->
+    <div class="col">
 
-  <section id="destinos" class="container mt-5">
+      <div
+        class="card h-100 categoria-card"
+        onclick="filtrarCategoria('parque')"
+        style="cursor:pointer;"
+      >
 
-    <h2 class="text-center">
-      Destaques de Belo Horizonte
+        <img
+          src="assets/imagem/parques.png"
+          class="card-img-top"
+          alt="Parques"
+        >
+
+        <div class="card-body">
+
+          <h5 class="card-title">
+            Parques
+          </h5>
+
+          <p class="card-text">
+            Conheça parques e áreas verdes da cidade.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BARES -->
+
+    <div class="col">
+
+      <div
+        class="card h-100 categoria-card"
+        onclick="filtrarCategoria('bar')"
+        style="cursor:pointer;"
+      >
+
+        <img
+          src="assets/imagem/bares.png"
+          class="card-img-top"
+          alt="Bares"
+        >
+
+        <div class="card-body">
+
+          <h5 class="card-title">
+            Bares
+          </h5>
+
+          <p class="card-text">
+            Descubra bares tradicionais e gastronômicos.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =====================================
+     DESTINOS
+====================================== -->
+
+<section id="destinos" class="container mt-5">
+
+  <h2 class="text-center">
+    Destaques de Belo Horizonte
+  </h2>
+
+  <p class="text-center">
+    Confira alguns dos locais turísticos mais visitados.
+  </p>
+
+  <div
+    id="destinosContainer"
+    class="row mt-4"
+  ></div>
+
+</section>
+
+<!-- =====================================
+     FORMULÁRIO CRUD
+====================================== -->
+
+<section id="cadastro" class="container mt-5">
+
+  <div class="crud-area p-4 shadow-sm rounded bg-light">
+
+    <h2 class="titulo-cadastro mb-4">
+
+      ➕ Cadastro de Destinos
+
+      <span class="subtitulo-cadastro">
+        - Adicione novos locais turísticos dinamicamente.
+      </span>
+
     </h2>
 
-    <p class="text-center">
-      Confira alguns dos locais turísticos mais visitados.
-    </p>
+    <div class="row g-3 align-items-end justify-content-center">
 
-    <div
-      id="destinosContainer"
-      class="row mt-4"
-    ></div>
+      <!-- NOME -->
 
-  </section>
+      <div class="col-md-4">
 
-  <!-- =====================================
-       FORMULÁRIO CRUD
-  ====================================== -->
+        <label class="form-label fw-semibold">
+          Nome do local
+        </label>
 
-  <section class="container mt-5">
+        <input
+          type="text"
+          id="novoNome"
+          class="form-control"
+          placeholder="Ex: Mercado Central"
+        >
 
-    <div class="crud-area p-4 shadow-sm rounded bg-light">
+      </div>
 
-      <h2 class="titulo-cadastro mb-4">
+      <!-- CATEGORIA -->
 
-        ➕ Cadastro de Destinos
+      <div class="col-md-3">
 
-        <span class="subtitulo-cadastro">
-          - Adicione novos locais turísticos dinamicamente.
-        </span>
+        <label class="form-label fw-semibold">
+          Categoria
+        </label>
 
-      </h2>
+        <select
+          id="novaCategoria"
+          class="form-select"
+        >
 
-      <div class="row g-3 align-items-end justify-content-center">
+          <option value="">
+            Escolha
+          </option>
 
-        <!-- NOME -->
+          <option value="museu">
+            Museu
+          </option>
 
-        <div class="col-md-4">
+          <option value="parque">
+            Parque
+          </option>
 
-          <label class="form-label fw-semibold">
-            Nome do local
-          </label>
+          <option value="bar">
+            Bar
+          </option>
 
-          <input
-            type="text"
-            id="novoNome"
-            class="form-control"
-            placeholder="Ex: Mercado Central"
-          >
+        </select>
 
-        </div>
+      </div>
 
-        <!-- CATEGORIA -->
+      <!-- BAIRRO -->
 
-        <div class="col-md-3">
+      <div class="col-md-3">
 
-          <label class="form-label fw-semibold">
-            Categoria
-          </label>
+        <label class="form-label fw-semibold">
+          Bairro
+        </label>
 
-          <select
-            id="novaCategoria"
-            class="form-select"
-          >
+        <input
+          type="text"
+          id="novoBairro"
+          class="form-control"
+          placeholder="Ex: Savassi"
+        >
 
-            <option value="">
-              Escolha
-            </option>
+      </div>
 
-            <option value="museu">
-              Museu
-            </option>
+      <!-- BOTÃO -->
 
-            <option value="parque">
-              Parque
-            </option>
+      <div class="col-md-2 d-grid">
 
-            <option value="bar">
-              Bar
-            </option>
+        <button
+          type="button"
+          id="btnAdicionar"
+          class="btn btn-primary"
+        >
 
-          </select>
+          Adicionar
 
-        </div>
-
-        <!-- BAIRRO -->
-
-        <div class="col-md-3">
-
-          <label class="form-label fw-semibold">
-            Bairro
-          </label>
-
-          <input
-            type="text"
-            id="novoBairro"
-            class="form-control"
-            placeholder="Ex: Savassi"
-          >
-
-        </div>
-
-        <!-- BOTÃO -->
-
-        <div class="col-md-2 d-grid">
-
-          <button
-            id="btnAdicionar"
-            class="btn btn-primary"
-          >
-
-            Adicionar
-
-          </button>
-
-        </div>
+        </button>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
 
-  <!-- =====================================
-       PAINEL
-  ====================================== -->
+</section>
+```
 
-  <section id="painel" class="container mt-5">
 
-    <h2>📊 Painel de Dados Turísticos</h2>
+<!-- =====================================
+     PAINEL
+====================================== -->
 
-    <p>
-      Visualização dinâmica das categorias turísticas cadastradas.
-    </p>
+<section id="painel" class="container mt-5">
 
-    <div class="grafico-area">
+  <h2 class="text-center">
+    📊 Painel de Dados Turísticos
+  </h2>
 
-      <canvas id="graficoCategorias"></canvas>
+  <p class="text-center">
+    Visualização dinâmica das categorias turísticas cadastradas.
+  </p>
 
-    </div>
+  <div class="grafico-area">
 
-  </section>
+    <canvas id="graficoCategorias"></canvas>
 
-  <!-- =====================================
-       CALENDÁRIO
-  ====================================== -->
+  </div>
 
-  <section id="agenda" class="container mt-5">
+</section>
 
-    <h2>📅 Agenda Turística</h2>
+<!-- =====================================
+     CALENDÁRIO
+====================================== -->
 
-    <p>
-      Calendário interativo com sugestões de visitas em Belo Horizonte.
-    </p>
+<section id="agenda" class="container mt-5">
 
-    <div
-      id="calendarioBH"
-      class="bg-white p-3 rounded shadow-sm"
-    ></div>
+  <h2 class="text-center">
+    📅 Agenda Turística
+  </h2>
 
-  </section>
+  <p class="text-center">
+    Calendário interativo com sugestões de visitas em Belo Horizonte.
+  </p>
 
-  <!-- =====================================
-       MAPA
-  ====================================== -->
+  <div
+    id="calendarioBH"
+    class="bg-white p-3 rounded shadow-sm"
+  ></div>
 
-  <section id="mapaTuristico" class="container mt-5">
+</section>
 
-    <h2>🗺️ Mapa Turístico</h2>
+<!-- =====================================
+     MAPA
+====================================== -->
 
-    <p>
-      Localização de pontos turísticos importantes da cidade.
-    </p>
+<section id="mapaTuristico" class="container mt-5">
 
-    <div
-      id="mapaBH"
-      style="
-        width: 100%;
-        height: 500px;
-        border-radius: 12px;
-        background: #f1f1f1;
-      "
-    ></div>
+  <h2 class="text-center">
+    🗺️ Mapa Turístico
+  </h2>
 
-  </section>
+  <p class="text-center">
+    Localização de pontos turísticos importantes da cidade.
+  </p>
 
-  <!-- =====================================
-       RODAPÉ
-  ====================================== -->
+  <div
+    id="mapaBH"
+    style="
+      width: 100%;
+      height: 500px;
+      border-radius: 12px;
+      background: #f1f1f1;
+    "
+  ></div>
 
-  <footer class="mt-5 text-center">
+</section>
 
-    <p>
-      Conheça BH - Turismo em Belo Horizonte
-    </p>
+<!-- =====================================
+     RODAPÉ
+====================================== -->
 
-    <p>
-      Patricia de Souza - Matrícula 901262
-    </p>
+<footer class="mt-5 text-center">
 
-  </footer>
+  <p>
+    Conheça BH - Turismo em Belo Horizonte
+  </p>
 
-  <!-- =====================================
-       SCRIPTS
-  ====================================== -->
+  <p>
+    Patricia de Souza - Matrícula 901262
+  </p>
 
-  <!-- Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</footer>
 
-  <!-- Chart.js -->
+<!-- =====================================
+     SCRIPTS
+====================================== -->
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <!-- FullCalendar -->
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+
+<!-- Locale PT-BR -->
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales-all.global.min.js"></script>
 
+<!-- Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- SCRIPT PRINCIPAL -->
+<script src="js/script.js"></script>
+
 <!-- LOGIN -->
+<script src="js/login.js"></script>
 
-
-<!-- Scripts principais -->
+<!-- GRÁFICOS -->
 <script src="js/graficos.js"></script>
-<script src="js/calendario.js"></script>
 
-<!-- Leaflet -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- CALENDÁRIO -->
+<script src="js/calendario.js"></script>
 
 <!-- MAPA -->
 <script src="js/mapa.js"></script>
-
-</body>
-// ======================================
-// LOGIN
-// ======================================
-
-const usuarios = [
-  { id: 1, nome: "Administrador", login: "admin", senha: "123" },
-  { id: 2, nome: "Usuário", login: "user", senha: "123" }
-];
-
-function fazerLogin() {
-
-  const login = prompt("Digite o login:");
-  const senha = prompt("Digite a senha:");
-
-  const usuario = usuarios.find(u =>
-    u.login === login && u.senha === senha
-  );
-
-  if (usuario) {
-
-    sessionStorage.setItem(
-      "usuarioCorrente",
-      JSON.stringify(usuario)
-    );
-
-    alert("Login realizado com sucesso!");
-
-    window.location.href = "index.html";
-
-  } else {
-    alert("Login ou senha inválidos");
-  }
-}
-
-
-
-</html>
-```
- <!-- LOGIN -->
-<script src="assets/js/login.js"></script>
-
-<!-- Scripts principais -->
-<script src="js/graficos.js"></script>
-<script src="js/calendario.js"></script>
-
-<!-- Leaflet -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-<!-- MAPA -->
-<script src="js/mapa.js"></script>
-
-</body>
-// ======================================
-// LOGIN
-// ======================================
-
-const usuarios = [
-  { id: 1, nome: "Administrador", login: "admin", senha: "123" },
-  { id: 2, nome: "Usuário", login: "user", senha: "123" }
-];
-
-function fazerLogin() {
-
-  const login = prompt("Digite o login:");
-  const senha = prompt("Digite a senha:");
-
-  const usuario = usuarios.find(u =>
-    u.login === login && u.senha === senha
-  );
-
-  if (usuario) {
-
-    sessionStorage.setItem(
-      "usuarioCorrente",
-      JSON.stringify(usuario)
-    );
-
-    alert("Login realizado com sucesso!");
-
-    window.location.href = "index.html";
-
-  } else {
-    alert("Login ou senha inválidos");
-  }
-}
-
-
-
-</html>
-```
-    <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales-all.global.min.js"></script>
-
-  <!-- LOGIN JS (ÚNICO E CORRETO) -->
-  <script src="modulos/login/login.js"></script>
-
-  <!-- SCRIPTS PRINCIPAIS -->
-  <script src="js/graficos.js"></script>
-  <script src="js/calendario.js"></script>
-  <script src="js/mapa.js"></script>
-  <script src="js/script.js"></script>
-
-  <!-- LOGIN CLICK (SÓ UMA VEZ) -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-      const linkLogin = document.getElementById("linkLogin");
-
-      if (!linkLogin) return;
-
-      linkLogin.addEventListener("click", function (e) {
-        e.preventDefault();
-        window.location.href = "modulos/login/index.html";
-      });
-
-    });
-  </script>
-
-</body>
-</html>

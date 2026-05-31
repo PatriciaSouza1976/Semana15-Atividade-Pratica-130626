@@ -1,61 +1,62 @@
- Semana 14 - Conheça BH
-
+Semana 15 - Conheça BH
 Informações do aluno
 
-Nome: Patricia de Souza  
+Nome: Patricia de Souza
 Matrícula: 901262
 
 
 
-O projeto tem como objetivo praticar:
+Descrição do Projeto
+O projeto “Conheça BH” é um sistema web para apresentação de pontos turísticos de Belo Horizonte, permitindo que o usuário explore locais, filtre categorias, cadastre novos destinos e interaja com os conteúdos de forma dinâmica.
 
-Manipulação de dados com JavaScript
-Uso de bibliotecas externas
-Visualização dinâmica de informações
-Estruturação de interfaces web
-Interação com o usuário
-Implementação de CRUD com LocalStorage
+Nesta atividade, foi implementado um sistema de login de usuários e uma funcionalidade de personalização com favoritos, permitindo que cada usuário marque locais de interesse e tenha sua própria lista salva.
 
 
 
 Funcionalidades
 
-Cadastro dinâmico de destinos turísticos
-Exclusão de destinos cadastrados
-Busca e filtro por categoria
-Gráfico de categorias turísticas utilizando Chart.js
-Calendário interativo com FullCalendar
-Mapa interativo com Leaflet e OpenStreetMap
-Persistência de dados com LocalStorage
-Atualização dinâmica da interface
+O sistema possui autenticação de usuários utilizando sessionStorage.
+
+Usuários de teste:
+Login: admin | Senha: 123
+Login: user | Senha: 123
+
+Funcionamento do login:
+O usuário realiza login na página /modulos/login/index.html
+Ao autenticar, os dados são armazenados em sessionStorage
+O sistema identifica automaticamente o usuário logado na Home
+
+Funcionalidade de favoritos:
+
+Login e logout com sessionStorage
+Identificação automática do usuário na interface
+Proteção de acesso à funcionalidade de favoritos
+Sistema de favoritos por usuário
+Persistência de dados no localStorage
+Atualização dinâmica dos cards
+Página “Meus Favoritos”
+Renderização dinâmica de locais turísticos
 
 
 Tecnologias utilizadas
 
 HTML5
 CSS3
-JavaScript
-Bootstrap
-Chart.js (gráficos de categorias turísticas)
-FullCalendar (agenda interativa)
-Leaflet + OpenStreetMap (mapa interativo)
+JavaScript (Vanilla JS)
+Bootstrap 5
 LocalStorage
+SessionStorage
 
 
 Prints do projeto
 
+Home com usuário logado
+![Home logado](assets/imagem/home_logado.png)
 
-Página inicial
-![Página inicial](assets/imagem/pagina_inicial1.png)
-![Página inicial 2](assets/imagem/pagina_inicial2.png)
+ Funcionalidade de favoritos
+![Favoritos funcionando](assets/imagem/favoritos_home.png)
 
-Cadastro de destino
-![Cadastro de destino](assets/imagem/cadastro_destino.png)
-
-Exclusão de destino
-![Exclusão de destino](assets/imagem/exclusao_destino.png)
+Página Meus Favoritos
+![Meus favoritos](assets/imagem/pagina_favoritos.png)
 
 
-Projeto desenvolvido para a atividade prática da Semana 14 da disciplina,  com foco na apresentação visual, dinâmica e interativa de dados turísticos de Belo Horizonte.
-
-A aplicação permite explorar destinos turísticos por meio de gráficos, calendário interativo, mapa e funcionalidades de cadastro dinâmico.
