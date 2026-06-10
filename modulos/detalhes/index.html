@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Detalhes do Local</title>
+
+<link rel="stylesheet" href="detalhe.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="../../index.html">⬅ Voltar</a>
+
+    <div id="detalhesLocal"></div>
+
+</div>
+
+<script>
+
+const idSelecionado = Number(
+  localStorage.getItem("localSelecionado")
+);
+
+const locais =
+  JSON.parse(localStorage.getItem("locaisBH")) || [];
+
+const local = locais.find(
+  item => item.id === idSelecionado
+);
+
+const container =
+  document.getElementById("detalhesLocal");
+
+if (local) {
+
+  container.innerHTML = `
+  
+    <h1>${local.nome}</h1>
+
+    <img
+      src="../../${local.imagem}"
+      alt="${local.nome}"
+      style="max-width:500px;width:100%;border-radius:10px;"
+    >
+
+    <p>
+      <strong>Descrição:</strong>
+      ${local.descricao}
+    </p>
+
+    <p>
+      <strong>Categoria:</strong>
+      ${local.categoria}
+    </p>
+
+  `;
+
+} else {
+
+  container.innerHTML =
+    "<h2>Local não encontrado.</h2>";
+
+}
+
+</script>
+
+</body>
+</html>

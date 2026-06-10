@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,10 +8,7 @@
   <title>Conheça BH - Turismo em Belo Horizonte</title>
 
   <!-- Leaflet -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet/dist/leaflet.css"
-  >
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 
   <!-- Bootstrap -->
   <link
@@ -26,80 +22,66 @@
     rel="stylesheet"
   >
 
-  <!-- CSS -->
+  <!-- CSS PRINCIPAL -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- CSS MENU LATERAL -->
+  <link rel="stylesheet" href="css/menu.css">
 
 </head>
 
 <body>
 
-  <!-- =====================================
-       TOPO
-  ====================================== -->
+  
 
-  <header class="topo-site">
+ <!-- MENU LATERAL FIXO -->
 
-    <div class="logo-area">
+<aside id="menuLateral" class="menu-lateral">
 
-      <img
-        src="assets/imagem/logo.png"
-        alt="Logo Conheça BH"
-        class="logo-site"
-      >
+  <a href="#categorias">Categorias</a>
 
-      <div>
+  <a href="#destinos">Destinos</a>
 
-        <h1>Conheça BH</h1>
+  <a href="#cadastro" id="menuCadastro">Cadastro</a>
 
-        <p>Turismo e Cultura em Belo Horizonte</p>
+  <a href="#painel">Painel</a>
 
-      </div>
+  <a href="#agenda">Agenda</a>
 
-    </div>
+  <a href="#mapaTuristico">Mapa</a>
 
-    <!-- MENU -->
+  <a href="favoritos.html" id="menuFavoritos">Favoritos</a>
+  <div id="areaUsuario"></div>
 
-    <nav class="menu-topo">
+</aside>
 
-      <a href="#categorias">
-        Categorias
-      </a>
 
-      <a href="#destinos">
-        Destinos
-      </a>
+<!-- TOPO -->
+<!-- TOPO -->
+<header class="topo-site">
 
-      <a href="#painel">
-        Painel
-      </a>
+  <div class="logo-area">
 
-      <a href="#agenda">
-        Agenda
-      </a>
+    <img
+      src="assets/imagem/logo.png"
+      alt="Logo Conheça BH"
+      class="logo-site"
+    >
 
-      <a href="#mapaTuristico">
-        Mapa
-      </a>
+    <div class="texto-logo">
 
-      <a href="favoritos.html">
-        Favoritos
-      </a>
+      <h1>Conheça BH</h1>
 
-    </nav>
-
-  <!-- ÁREA DO USUÁRIO -->
-
-<div id="areaUsuario" class="area-usuario">
-
+      <p>Turismo e Cultura em Belo Horizonte</p>
 
     </div>
 
-  </header>
+  </div>
 
-  <!-- =====================================
-       CARROSSEL
-  ====================================== -->
+  <div id="areaUsuario"></div>
 
+</header>
+  <!-- CARROSSEL -->
   <section class="container mt-4">
 
     <div
@@ -110,8 +92,6 @@
 
       <div class="carousel-inner">
 
-        <!-- ITEM 1 -->
-
         <div class="carousel-item active">
 
           <img
@@ -121,18 +101,11 @@
           >
 
           <div class="carousel-caption">
-
             <h5>Praça da Liberdade</h5>
-
-            <p>
-              Centro cultural e histórico de Belo Horizonte.
-            </p>
-
+            <p>Centro cultural e histórico de Belo Horizonte.</p>
           </div>
 
         </div>
-
-        <!-- ITEM 2 -->
 
         <div class="carousel-item">
 
@@ -143,18 +116,11 @@
           >
 
           <div class="carousel-caption">
-
             <h5>Parque das Mangabeiras</h5>
-
-            <p>
-              Vista panorâmica deslumbrante da cidade.
-            </p>
-
+            <p>Vista panorâmica deslumbrante da cidade.</p>
           </div>
 
         </div>
-
-        <!-- ITEM 3 -->
 
         <div class="carousel-item">
 
@@ -165,13 +131,8 @@
           >
 
           <div class="carousel-caption">
-
             <h5>Feira Hippie</h5>
-
-            <p>
-              Cultura e gastronomia aos domingos.
-            </p>
-
+            <p>Cultura e gastronomia aos domingos.</p>
           </div>
 
         </div>
@@ -184,9 +145,7 @@
         data-bs-target="#carouselBH"
         data-bs-slide="prev"
       >
-
         <span class="carousel-control-prev-icon"></span>
-
       </button>
 
       <button
@@ -195,19 +154,14 @@
         data-bs-target="#carouselBH"
         data-bs-slide="next"
       >
-
         <span class="carousel-control-next-icon"></span>
-
       </button>
 
     </div>
 
   </section>
 
-  <!-- =====================================
-       INTRODUÇÃO
-  ====================================== -->
-
+  <!-- INTRODUÇÃO -->
   <section class="introducao">
 
     <h2>Descubra Belo Horizonte</h2>
@@ -231,7 +185,6 @@
     </div>
 
   </section>
-```
 
 
 <!-- =====================================
@@ -240,114 +193,49 @@
 
 <section id="categorias" class="container mt-5">
 
-  <h2 class="text-center">
-    Categorias Turísticas
-  </h2>
+  <h2 class="text-center">Categorias Turísticas</h2>
 
-  <p class="text-center">
-    Escolha uma categoria para explorar.
-  </p>
+  <p class="text-center">Escolha uma categoria para explorar.</p>
 
   <div class="row row-cols-1 row-cols-md-3 g-4">
 
     <!-- MUSEUS -->
-
     <div class="col">
-
-      <div
-        class="card h-100 categoria-card"
-        onclick="filtrarCategoria('museu')"
-        style="cursor:pointer;"
-      >
-
-        <img
-          src="assets/imagem/museus.png"
-          class="card-img-top"
-          alt="Museus"
-        >
+      <div class="card h-100 categoria-card" onclick="filtrarCategoria('museu')" style="cursor:pointer;">
+        <img src="assets/imagem/museus.png" class="card-img-top" alt="Museus">
 
         <div class="card-body">
-
-          <h5 class="card-title">
-            Museus
-          </h5>
-
-          <p class="card-text">
-            Explore os melhores museus de Belo Horizonte.
-          </p>
-
+          <h5 class="card-title">Museus</h5>
+          <p class="card-text">Explore os melhores museus de Belo Horizonte.</p>
         </div>
-
       </div>
-
     </div>
 
     <!-- PARQUES -->
-
     <div class="col">
-
-      <div
-        class="card h-100 categoria-card"
-        onclick="filtrarCategoria('parque')"
-        style="cursor:pointer;"
-      >
-
-        <img
-          src="assets/imagem/parques.png"
-          class="card-img-top"
-          alt="Parques"
-        >
+      <div class="card h-100 categoria-card" onclick="filtrarCategoria('parque')" style="cursor:pointer;">
+        <img src="assets/imagem/parques.png" class="card-img-top" alt="Parques">
 
         <div class="card-body">
-
-          <h5 class="card-title">
-            Parques
-          </h5>
-
-          <p class="card-text">
-            Conheça parques e áreas verdes da cidade.
-          </p>
-
+          <h5 class="card-title">Parques</h5>
+          <p class="card-text">Conheça parques e áreas verdes da cidade.</p>
         </div>
-
       </div>
-
     </div>
 
     <!-- BARES -->
-
     <div class="col">
-
-      <div
-        class="card h-100 categoria-card"
-        onclick="filtrarCategoria('bar')"
-        style="cursor:pointer;"
-      >
-
-        <img
-          src="assets/imagem/bares.png"
-          class="card-img-top"
-          alt="Bares"
-        >
+      <div class="card h-100 categoria-card" onclick="filtrarCategoria('bar')" style="cursor:pointer;">
+        <img src="assets/imagem/bares.png" class="card-img-top" alt="Bares">
 
         <div class="card-body">
-
-          <h5 class="card-title">
-            Bares
-          </h5>
-
-          <p class="card-text">
-            Descubra bares tradicionais e gastronômicos.
-          </p>
-
+          <h5 class="card-title">Bares</h5>
+          <p class="card-text">Descubra bares tradicionais e gastronômicos.</p>
         </div>
-
       </div>
-
     </div>
 
   </div>
-
 </section>
 
 <!-- =====================================
@@ -356,18 +244,11 @@
 
 <section id="destinos" class="container mt-5">
 
-  <h2 class="text-center">
-    Destaques de Belo Horizonte
-  </h2>
+  <h2 class="text-center">Destaques de Belo Horizonte</h2>
 
-  <p class="text-center">
-    Confira alguns dos locais turísticos mais visitados.
-  </p>
+  <p class="text-center">Confira alguns dos locais turísticos mais visitados.</p>
 
-  <div
-    id="destinosContainer"
-    class="row mt-4"
-  ></div>
+  <div id="destinosContainer" class="row mt-4"></div>
 
 </section>
 
@@ -380,98 +261,36 @@
   <div class="crud-area p-4 shadow-sm rounded bg-light">
 
     <h2 class="titulo-cadastro mb-4">
-
       ➕ Cadastro de Destinos
-
-      <span class="subtitulo-cadastro">
-        - Adicione novos locais turísticos dinamicamente.
-      </span>
-
+      <span class="subtitulo-cadastro">- Adicione novos locais turísticos dinamicamente.</span>
     </h2>
 
     <div class="row g-3 align-items-end justify-content-center">
 
-      <!-- NOME -->
-
       <div class="col-md-4">
-
-        <label class="form-label fw-semibold">
-          Nome do local
-        </label>
-
-        <input
-          type="text"
-          id="novoNome"
-          class="form-control"
-          placeholder="Ex: Mercado Central"
-        >
-
+        <label class="form-label fw-semibold">Nome do local</label>
+        <input type="text" id="novoNome" class="form-control" placeholder="Ex: Mercado Central">
       </div>
 
-      <!-- CATEGORIA -->
-
       <div class="col-md-3">
-
-        <label class="form-label fw-semibold">
-          Categoria
-        </label>
-
-        <select
-          id="novaCategoria"
-          class="form-select"
-        >
-
-          <option value="">
-            Escolha
-          </option>
-
-          <option value="museu">
-            Museu
-          </option>
-
-          <option value="parque">
-            Parque
-          </option>
-
-          <option value="bar">
-            Bar
-          </option>
-
+        <label class="form-label fw-semibold">Categoria</label>
+        <select id="novaCategoria" class="form-select">
+          <option value="">Escolha</option>
+          <option value="museu">Museu</option>
+          <option value="parque">Parque</option>
+          <option value="bar">Bar</option>
         </select>
-
       </div>
-
-      <!-- BAIRRO -->
 
       <div class="col-md-3">
-
-        <label class="form-label fw-semibold">
-          Bairro
-        </label>
-
-        <input
-          type="text"
-          id="novoBairro"
-          class="form-control"
-          placeholder="Ex: Savassi"
-        >
-
+        <label class="form-label fw-semibold">Bairro</label>
+        <input type="text" id="novoBairro" class="form-control" placeholder="Ex: Savassi">
       </div>
-
-      <!-- BOTÃO -->
 
       <div class="col-md-2 d-grid">
-
-        <button
-          type="button"
-          id="btnAdicionar"
-          class="btn btn-primary"
-        >
-
+        <button type="button" id="btnAdicionar" class="btn btn-primary">
           Adicionar
-
         </button>
-
       </div>
 
     </div>
@@ -479,8 +298,6 @@
   </div>
 
 </section>
-```
-
 
 <!-- =====================================
      PAINEL
@@ -488,18 +305,12 @@
 
 <section id="painel" class="container mt-5">
 
-  <h2 class="text-center">
-    📊 Painel de Dados Turísticos
-  </h2>
+  <h2 class="text-center">📊 Painel de Dados Turísticos</h2>
 
-  <p class="text-center">
-    Visualização dinâmica das categorias turísticas cadastradas.
-  </p>
+  <p class="text-center">Visualização dinâmica das categorias turísticas cadastradas.</p>
 
   <div class="grafico-area">
-
     <canvas id="graficoCategorias"></canvas>
-
   </div>
 
 </section>
@@ -510,18 +321,11 @@
 
 <section id="agenda" class="container mt-5">
 
-  <h2 class="text-center">
-    📅 Agenda Turística
-  </h2>
+  <h2 class="text-center">📅 Agenda Turística</h2>
 
-  <p class="text-center">
-    Calendário interativo com sugestões de visitas em Belo Horizonte.
-  </p>
+  <p class="text-center">Calendário interativo com sugestões de visitas em Belo Horizonte.</p>
 
-  <div
-    id="calendarioBH"
-    class="bg-white p-3 rounded shadow-sm"
-  ></div>
+  <div id="calendarioBH" class="bg-white p-3 rounded shadow-sm"></div>
 
 </section>
 
@@ -531,22 +335,13 @@
 
 <section id="mapaTuristico" class="container mt-5">
 
-  <h2 class="text-center">
-    🗺️ Mapa Turístico
-  </h2>
+  <h2 class="text-center">🗺️ Mapa Turístico</h2>
 
-  <p class="text-center">
-    Localização de pontos turísticos importantes da cidade.
-  </p>
+  <p class="text-center">Localização de pontos turísticos importantes da cidade.</p>
 
   <div
     id="mapaBH"
-    style="
-      width: 100%;
-      height: 500px;
-      border-radius: 12px;
-      background: #f1f1f1;
-    "
+    style="width: 100%; height: 500px; border-radius: 12px; background: #f1f1f1;"
   ></div>
 
 </section>
@@ -555,7 +350,7 @@
      RODAPÉ
 ====================================== -->
 
-<footer class="mt-5 text-center">
+<footer class="mt-5 text-center py-4">
 
   <p>
     Conheça BH - Turismo em Belo Horizonte
@@ -571,32 +366,18 @@
      SCRIPTS
 ====================================== -->
 
-<!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<!-- FullCalendar -->
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
-
-<!-- Locale PT-BR -->
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/locales-all.global.min.js"></script>
-
-<!-- Leaflet -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<!-- SCRIPT PRINCIPAL -->
+<!-- PROJETO -->
 <script src="js/script.js"></script>
-
-<!-- LOGIN -->
 <script src="js/login.js"></script>
-
-<!-- GRÁFICOS -->
 <script src="js/graficos.js"></script>
-
-<!-- CALENDÁRIO -->
 <script src="js/calendario.js"></script>
-
-<!-- MAPA -->
 <script src="js/mapa.js"></script>
+
+</body>
+</html>

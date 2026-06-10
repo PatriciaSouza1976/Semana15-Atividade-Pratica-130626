@@ -23,63 +23,60 @@ body{
 }
 
 /* ======================================
-   TOPO
+   LOGO / CABEÇALHO
 ====================================== */
 
-.topo-site{
+.logo-area {
 
-  background: linear-gradient(90deg,#0d6efd,#0b5ed7);
+  display: flex;
 
-  color:white;
+  flex-direction: column;
 
-  display:flex;
+  align-items: center;
 
-  justify-content:space-between;
+  justify-content: center;
 
-  align-items:center;
+  text-align: center;
 
-  padding:12px 40px;
+  width: 100%;
 
-  box-shadow:0 2px 10px rgba(0,0,0,0.15);
-
-}
-
-.logo-area{
-
-  display:flex;
-
-  align-items:center;
-
-  gap:15px;
+  padding: 20px 0;
 
 }
 
-.logo-site{
+.logo-site {
 
-  width:120px;
+  width: 180px;
 
-  height:120px;
+  height: 180px;
 
-  object-fit:contain;
+  object-fit: contain;
 
-}
-
-.logo-area h1{
-
-  font-size:32px;
-
-  margin-bottom:2px;
+  margin-bottom: 10px;
 
 }
 
-.logo-area p{
+.logo-area h1 {
 
-  font-size:15px;
+  font-size: 3rem;
 
-  opacity:0.9;
+  font-weight: 700;
+
+  color: white;
+
+  margin-bottom: 5px;
 
 }
 
+.logo-area p {
+
+  font-size: 1.2rem;
+
+  color: white;
+
+  opacity: 0.95;
+
+}
 /* ======================================
    MENU
 ====================================== */
@@ -106,7 +103,7 @@ body{
 
 .menu-topo a:hover{
 
-  color:#ffd43b;
+  color:#d6e4ff;
 
 }
 
@@ -134,7 +131,7 @@ body{
 
 .carousel-caption{
 
-  background:rgba(0,0,0,0.5);
+  background:rgba(20,44,70,0.75);
 
   border-radius:12px;
 
@@ -154,8 +151,8 @@ body{
 
   background: linear-gradient(
     135deg,
-    #f8fbff,
-    #edf4ff
+    #f5f7fa,
+    #dfe8f3
   );
 
   border-radius:18px;
@@ -168,7 +165,7 @@ body{
 
   margin-bottom:8px;
 
-  color:#0d6efd;
+  color:#1E3A5F;
 
 }
 
@@ -206,7 +203,7 @@ body{
 
   padding:10px;
 
-  border:1px solid #ccc;
+  border:1px solid #b8c7d9;
 
   border-radius:8px;
 
@@ -220,7 +217,7 @@ body{
 
   border-radius:8px;
 
-  background:#0d6efd;
+  background:#1E3A5F;
 
   color:white;
 
@@ -234,7 +231,7 @@ body{
 
 .busca button:hover{
 
-  background:#0b5ed7;
+  background:#274B77;
 
 }
 
@@ -264,7 +261,7 @@ section h2{
 
   margin-bottom:5px;
 
-  color:#0d6efd;
+  color:#1E3A5F;
 
 }
 
@@ -282,7 +279,7 @@ section p{
 
 .categoria-card{
 
-  background:#f8fbff;
+  background:#f5f7fa;
 
   border:none;
 
@@ -330,7 +327,7 @@ section p{
 
   margin-bottom:6px;
 
-  color:#0d6efd;
+  color:#1E3A5F;
 
 }
 
@@ -402,7 +399,7 @@ section p{
 
   font-weight:bold;
 
-  color:#0d6efd;
+  color:#1E3A5F;
 
   margin-bottom:8px;
 
@@ -438,13 +435,17 @@ section p{
 
 .info-local span{
 
-  background:#eef3ff;
+  background:#dfe8f3;
+
+  color:#142C46;
 
   padding:6px 10px;
 
   border-radius:8px;
 
   font-size:13px;
+
+  font-weight:bold;
 
 }
 
@@ -478,17 +479,17 @@ section p{
 
 #calendarioBH {
 
-  background:#fdfdfd;
+  background: #fdfdfd;
 
-  border-radius:16px;
+  border-radius: 16px;
 
-  padding:20px;
+  padding: 20px;
 
-  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 
-  max-width:1400px;
+  max-width: 1400px;
 
-  margin:auto;
+  margin: auto;
 
 }
 
@@ -496,11 +497,11 @@ section p{
 
 .fc-toolbar-title {
 
-  font-size:24px !important;
+  font-size: 24px !important;
 
-  font-weight:bold;
+  font-weight: bold;
 
-  color:#0d6efd;
+  color: #1E3A5F;
 
 }
 
@@ -508,11 +509,19 @@ section p{
 
 .fc-button {
 
-  background-color:#0d6efd !important;
+  background-color: #1E3A5F !important;
 
-  border:none !important;
+  border: none !important;
 
-  border-radius:8px !important;
+  border-radius: 8px !important;
+
+  color: white !important;
+
+}
+
+.fc-button:hover {
+
+  background-color: #274B77 !important;
 
 }
 
@@ -520,15 +529,19 @@ section p{
 
 .fc-event {
 
-  border:none !important;
+  background: #1E3A5F !important;
 
-  border-radius:6px !important;
+  color: white !important;
 
-  padding:2px !important;
+  border: none !important;
 
-  font-size:11px !important;
+  border-radius: 6px !important;
 
-  font-weight:bold;
+  padding: 2px !important;
+
+  font-size: 11px !important;
+
+  font-weight: bold;
 
 }
 
@@ -536,11 +549,11 @@ section p{
 
 .fc-daygrid-day-number {
 
-  color:#333 !important;
+  color: #333 !important;
 
-  text-decoration:none !important;
+  text-decoration: none !important;
 
-  font-size:13px;
+  font-size: 13px;
 
 }
 
@@ -548,15 +561,41 @@ section p{
 
 .fc .fc-multimonth {
 
-  border:none !important;
+  border: none !important;
 
 }
 
 .fc .fc-multimonth-month {
 
-  min-width:380px;
+  min-width: 350px;
 
-  padding:10px;
+  padding: 15px;
+
+  background: #ffffff;
+
+  border: 2px solid #d9d9d9;
+
+  border-radius: 12px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+/* Espaço entre os meses */
+
+.fc-multimonth {
+
+  gap: 20px !important;
+
+}
+
+/* RESPONSIVO */
+
+@media (min-width: 1200px) {
+
+  .fc .fc-multimonth-month {
+    width: 32% !important;
+  }
 
 }
 
@@ -584,7 +623,7 @@ section p{
 
 footer{
 
-  background:linear-gradient(90deg,#0d6efd,#0b5ed7);
+  background:linear-gradient(90deg,#1E3A5F,#142C46);
 
   color:white;
 
@@ -600,6 +639,8 @@ footer p{
 
   margin:5px 0;
 
+  color:white;
+
 }
 
 /* ======================================
@@ -608,7 +649,7 @@ footer p{
 
 @media(max-width:992px){
 
-  .fc .fc-multimonth-month {
+  .fc .fc-multimonth-month{
 
     min-width:100%;
 
@@ -616,134 +657,256 @@ footer p{
 
 }
 
-@media(max-width:768px){
+  /* ======================================
+   TOPO
+====================================== */
 
-  .topo-site{
+.topo-site {
 
-    flex-direction:column;
+  background: #1E3A5F;
 
-    gap:15px;
+  padding: 20px;
 
-    text-align:center;
+}
+
+/* =========================
+   ÁREA DO USUÁRIO
+========================= */
+
+#areaUsuario {
+  color: white;
+  font-weight: bold;
+}
+
+#areaUsuario a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#areaUsuario a:hover {
+  text-decoration: underline;
+}
+
+
+#areaUsuario {
+  margin-top: auto; /* empurra para o final do menu */
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* botão entrar / usuário */
+#areaUsuario a,
+#areaUsuario button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+#areaUsuario a:hover,
+#areaUsuario button:hover {
+  background: rgba(255,255,255,0.1);
+}
+/* ======================================
+   LOGO + TEXTO
+====================================== */
+
+.logo-area {
+
+  display: flex !important;
+
+  flex-direction: row !important;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+
+}
+
+.logo-site {
+
+  width: 80px;
+
+  height: 80px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+}
+
+.texto-logo {
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  text-align: left;
+
+}
+
+.texto-logo h1 {
+
+  margin: 0;
+
+  color: white;
+
+  font-size: 32px;
+
+}
+
+.texto-logo p {
+
+  margin: 5px 0 0 0;
+
+  color: white;
+
+  font-size: 16px;
+
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width: 768px) {
+
+  .logo-area {
+
+    flex-direction: column !important;
+
+    text-align: center;
 
   }
 
-  .menu-topo{
+  .texto-logo {
 
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-  }
-
-  .busca{
-
-    flex-direction:column;
-
-    align-items:center;
-
-  }
-
-  .busca input{
-
-    width:100%;
-
-    max-width:300px;
-
-  }
-
-  .logo-site{
-
-    width:90px;
-
-    height:90px;
-
-  }
-
-  .carousel img{
-
-    height:250px;
+    text-align: center;
 
   }
 
 }
 /* ======================================
+   AJUSTES MOBILE
+====================================== */
+
+@media (max-width: 768px) {
+
+  .busca {
+
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .busca input {
+
+    width: 100%;
+    max-width: 300px;
+
+  }
+
+  .carousel img {
+
+    height: 250px;
+
+  }
+
+}
+
+/* ======================================
    CRUD
 ====================================== */
 
-.crud-area{
+.crud-area {
 
-  background:white;
+  background: white;
 
-  padding:25px;
+  padding: 25px;
 
-  border-radius:16px;
+  border-radius: 16px;
 
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 
-}
+  border: 1px solid #d7e1ec;
 
-.crud-area h2{
-
-  color:#0d6efd;
-
-  margin-bottom:10px;
+  text-align: center;
 
 }
 
-.crud-area p{
+.crud-area h2 {
 
-  margin-bottom:20px;
+  color: #1E3A5F;
 
-  color:#666;
+  margin-bottom: 10px;
+
+}
+
+.crud-area p {
+
+  margin-bottom: 20px;
+
+  color: #666;
+
+}
+
+.crud-area .row {
+
+  justify-content: center;
 
 }
 
 .crud-area input,
-.crud-area select{
+.crud-area select {
 
-  height:48px;
+  height: 48px;
 
-  border-radius:10px;
+  border-radius: 10px;
+
+  text-align: center;
+
+  border: 1px solid #b8c7d9;
+
+}
+
+.crud-area button {
+
+  height: 48px;
+
+  border-radius: 10px;
+
+  font-weight: bold;
+
+  text-align: center;
+
+  background: #1E3A5F;
+
+  color: white;
+
+  border: none;
+
+  transition: 0.3s;
 
 }
 
-.crud-area button{
+.crud-area button:hover {
 
-  height:48px;
-
-  border-radius:10px;
-
-  font-weight:bold;
+  background: #274B77;
 
 }
+
 /* ======================================
    TÍTULO DO CADASTRO
-====================================== */
-
-.titulo-cadastro {
-
-  font-size: 1.5rem;
-
-  font-weight: 700;
-
-  margin-bottom: 20px;
-
-  color: #2c3e50;
-
-}
-
-.titulo-cadastro span {
-
-  font-size: 1rem;
-
-  font-weight: 400;
-
-  color: #6c757d;
-
-}
-/* ======================================
-   CRUD
 ====================================== */
 
 .titulo-cadastro {
@@ -764,6 +927,8 @@ footer p{
 
   text-align: center;
 
+  color: #1E3A5F;
+
 }
 
 .subtitulo-cadastro {
@@ -776,31 +941,6 @@ footer p{
 
 }
 
-.crud-area {
-
-  border: 1px solid #dee2e6;
-
-}
-.crud-area {
-
-  text-align: center;
-
-}
-
-.crud-area .row {
-
-  justify-content: center;
-
-}
-
-.crud-area input,
-.crud-area select,
-.crud-area button {
-
-  text-align: center;
-
-}
-```css id="9f7o2a"
 /* ======================================
    ÁREA DO USUÁRIO
 ====================================== */
@@ -808,26 +948,39 @@ footer p{
 .area-usuario {
 
   display: flex;
+
   align-items: center;
+
+  justify-content: center;
+
   gap: 10px;
+
+  margin-top: 10px;
 
 }
 
 .area-usuario a {
 
   text-decoration: none;
+
   color: white;
+
   font-weight: bold;
-  background-color: #0d6efd;
+
+  background-color: #1E3A5F;
+
   padding: 8px 14px;
+
   border-radius: 8px;
+
   transition: 0.3s;
 
 }
 
 .area-usuario a:hover {
 
-  background-color: #084298;
+  background-color: #274B77;
+
   color: white;
 
 }
@@ -835,75 +988,56 @@ footer p{
 .area-usuario span {
 
   font-weight: bold;
-  color: #333;
+
+  color: white;
 
 }
-```
-/* ==============================
-   ESCALA GERAL DO SITE
-   ============================== */
+
+/* ======================================
+   AJUSTE DE ESCALA DO SITE
+====================================== */
+
 body {
+
   font-size: 14px;
-  transform: scale(0.95);
-  transform-origin: top center;
+
 }
 
-/* =========================
-   SEPARAR OS MESES DO CALENDÁRIO
-========================= */
+.logo-site {
 
-.fc {
-  font-size: 0.85rem;
+  width: 80px;
+
+  height: 80px;
+
 }
 
-/* cada “bloco” do calendário */
-.fc .fc-view-harness {
-  border: 2px solid #ddd;
-  border-radius: 12px;
-  padding: 10px;
-  margin-bottom: 20px;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+
+.carousel img {
+
+  height: 260px;
+
 }
 
-/* cabeçalho do mês */
-.fc .fc-toolbar-title {
-  font-size: 1rem;
-}
-
-/* =========================
-   DEIXAR O SITE MAIS COMPACTO
-========================= */
-
-body {
-  font-size: 14px; /* padrão é 16px */
-}
-
-h1 {
-  font-size: 1.6rem;
-}
-
-h2 {
-  font-size: 1.3rem;
-}
-
-h3, h4 {
-  font-size: 1.1rem;
-}
-
-/* cartões menores */
-.card {
-  transform: scale(0.95);
-}
-
-/* imagens menores */
 .card-img-top {
-  max-height: 160px;
-  object-fit: cover;
+
+  height: 180px;
+
 }
 
-/* botões menores */
-button, .btn {
-  font-size: 0.85rem;
-  padding: 5px 10px;
+.card-title {
+
+  font-size: 18px;
+
+}
+
+.card-text {
+
+  font-size: 13px;
+
+}
+
+section {
+
+  padding: 15px;
+
 }
